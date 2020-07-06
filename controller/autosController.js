@@ -7,16 +7,22 @@ const autos = {
       res.write('--TODOS NUESTROS MODELOS DE VEHICULOS--')
         res.write('\n')
         dbAutos.forEach(function(concesionarias){
-            res.write('\n')
         concesionarias.autos.forEach(function(autos){
         res.write('\n')
-        res.write(autos.marca)
+        res.write('Marca: ' + ' ' + autos.marca)
+        res.write('\n')
+        res.write('Modelo : ' + ' ' + autos.modelo)
+        res.write('\n')
+        res.write('Año : ' + ' ' + autos.anio)
+        res.write('\n')
+        res.write('Color : ' + ' ' + autos.color)
+        res.write('\n\n\n')
        })
-        
-        })
-        res.end()
+       res.send()
+        })  
     }
 }
+
     
 
 
